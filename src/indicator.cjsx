@@ -1,7 +1,10 @@
 React = require 'react'
 
-Indicator = React.createClass
-  render: ->
-    <span></span>
+LoadingIndicator = React.createClass
+  getDefaultProps: ->
+    message: 'Loading'
 
-module.exports = Indicator
+  render: ->
+    <span>{@props.message}</span>
+
+module.exports = LoadingIndicator

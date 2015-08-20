@@ -1,4 +1,4 @@
-describe 'Indicator', ->
+describe 'LoadingIndicator', ->
   React = null
   TestUtils = null
   expect = null
@@ -10,6 +10,15 @@ describe 'Indicator', ->
     {expect} = require 'chai'
     Indicator = require '../indicator'
 
-  it 'renders without problems', ->
+  it 'should render without problems', ->
     indicator = TestUtils.renderIntoDocument <Indicator/>
     expect(indicator).to.exist
+
+  it 'should use supplied loading message', ->
+    indicator = TestUtils.renderIntoDocument <Indicator message="Nacitam" />
+    expect(indicator.getDOMNode().textContent).to.equal 'Nacitam'
+
+  it 'should use default loading message if no supplied', ->
+    indicator = TestUtils.renderIntoDocument <Indicator />
+    expect(indicator.getDOMNode().textContent).to.equal 'Loading'
+
