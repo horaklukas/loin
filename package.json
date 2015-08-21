@@ -1,6 +1,6 @@
 {
   "name": "loin",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Very simple loading indicator React component",
   "main": "dist/indicator.js",
   "scripts": {
