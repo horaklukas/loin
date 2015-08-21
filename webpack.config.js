@@ -5,8 +5,8 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'indicator.js',
-    libraryTarget: 'var',
-    library: 'LoadingIndicator' // name of the global var
+    libraryTarget: 'commonjs2'// 'umd',
+    //library: 'LoadingIndicator' // name of the global var
   },
   resolve: {
     extensions: ['', '.js', '.cjsx', '.coffee']
@@ -19,6 +19,6 @@ module.exports = {
     ]
   },
   externals: {
-    'react': 'React'
+    'react': true//'React'
   }
 }

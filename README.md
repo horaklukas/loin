@@ -7,10 +7,18 @@ Usage
 -----
 
 ```javascript
-React.render(
-  <LoadingIndicator message="Loading data" />,
-  document.getElementById('indicator')
-);
+var React = require('react');
+var LoadingIndicator = require('loin');
+
+React.createClass({
+  render: function() {
+  	return (
+  		<div>
+  			<LoadingIndicator message="Loading data" />
+  		</div>
+  	);
+  }
+});
 ```
 
 Component props

@@ -1,6 +1,5 @@
 React = require 'react'
-
-require './indicator.styl'
+styles = require './indicator-styles'
 
 LoadingIndicator = React.createClass
   statics:
@@ -28,7 +27,7 @@ LoadingIndicator = React.createClass
 
     <div className="indicator">
       <span className="message">{@props.message}</span>
-      <span className="ellipsis">{dots}</span>
+      <span className="ellipsis" style={styles.ellipsis}>{dots}</span>
     </div>
 
 module.exports = LoadingIndicator
