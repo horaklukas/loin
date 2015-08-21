@@ -1,5 +1,7 @@
 React = require 'react'
 
+require './indicator.styl'
+
 LoadingIndicator = React.createClass
   statics:
     TICK: 500
@@ -24,6 +26,9 @@ LoadingIndicator = React.createClass
   render: ->
     dots = ('.' for i in [0...@state.dotsCount]).join ''
 
-    <span>{@props.message}{dots}</span>
+    <div className="indicator">
+      <span className="message">{@props.message}</span>
+      <span className="ellipsis">{dots}</span>
+    </div>
 
 module.exports = LoadingIndicator

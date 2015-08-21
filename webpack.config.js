@@ -1,12 +1,12 @@
 var path = require('path');
 
 module.exports = {
-  entry: [
-    './src/indicator'
-  ],
+  entry: ['./src/indicator'],
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: 'indicator.js',
+    libraryTarget: 'var',
+    library: 'LoadingIndicator' // name of the global var
   },
   resolve: {
     extensions: ['', '.js', '.cjsx', '.coffee']
@@ -14,7 +14,11 @@ module.exports = {
   module: {
     loaders: [
       { test: /\.cjsx$/, loaders: ['coffee', 'cjsx']},
-      { test: /\.coffee$/, loader: 'coffee' }
+      { test: /\.coffee$/, loader: 'coffee' },
+      { test: /\.styl$/, loader: 'style-loader!css-loader!stylus-loader' }
     ]
+  },
+  externals: {
+    'react': 'React'
   }
 }

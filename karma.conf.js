@@ -23,7 +23,8 @@ module.exports = function (config) {
       module: {
         loaders: [
           { test: /\.cjsx$/, loaders: ['coffee', 'cjsx']},
-          { test: /\.coffee$/, loader: 'coffee' }
+          { test: /\.coffee$/, loader: 'coffee' },
+          { test: /\.styl$/, loader: 'style-loader!css-loader!stylus-loader' }
         ]
       }
     },
