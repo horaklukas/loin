@@ -1,7 +1,33 @@
 React = require 'react'
+styles = require './indicator-styles'
 
-Indicator = React.createClass
+LoadingIndicator = React.createClass
+  statics:
+    TICK: 500
+
+  componentWillMount: ->
+    @timer = setInterval @setDotsCount, LoadingIndicator.TICK
+
+  componentWillUnmount: ->
+    clearInterval @timer
+
+  setDotsCount: ->
+    count = if @state.dotsCount is 3 then 0 else @state.dotsCount + 1
+
+    @setState dotsCount: count
+
+  getDefaultProps: ->
+    message: 'Loading'
+
+  getInitialState: ->
+    dotsCount: 0
+
   render: ->
-    <span></span>
+    dots = ('.' for i in [0...@state.dotsCount]).join ''
 
-module.exports = Indicator
+    <div className="indicator">
+      <span className="message">{@props.message}</span>
+      <span className="ellipsis" style={styles.ellipsis}>{dots}</span>
+    </div>
+
+module.exports = LoadingIndicator

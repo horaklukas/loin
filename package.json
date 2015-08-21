@@ -1,8 +1,8 @@
 {
   "name": "loin",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Very simple loading indicator React component",
-  "main": "index.js",
+  "main": "dist/indicator.js",
   "scripts": {
     "test": "karma start"
   },
@@ -17,8 +17,10 @@
     "karma-chai-plugins": "^0.6.0",
     "karma-chrome-launcher": "^0.2.0",
     "karma-mocha": "^0.2.0",
+    "karma-sinon": "^1.0.4",
     "karma-webpack": "^1.7.0",
     "mocha": "^2.2.5",
+    "sinon": "^1.16.1",
     "webpack": "^1.11.0"
   },
   "dependencies": {

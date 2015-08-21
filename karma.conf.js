@@ -4,7 +4,7 @@ module.exports = function (config) {
   config.set({
     browsers: [ 'Chrome' ],
     singleRun: true, //just run once by default
-    frameworks: [ 'mocha', 'chai', 'sinon-chai' ],
+    frameworks: [ 'mocha', 'chai', 'sinon-chai', 'sinon' ],
     files: [
       'tests.webpack.js'
     ],
@@ -23,7 +23,8 @@ module.exports = function (config) {
       module: {
         loaders: [
           { test: /\.cjsx$/, loaders: ['coffee', 'cjsx']},
-          { test: /\.coffee$/, loader: 'coffee' }
+          { test: /\.coffee$/, loader: 'coffee' },
+          { test: /\.styl$/, loader: 'style-loader!css-loader!stylus-loader' }
         ]
       }
     },
