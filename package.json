@@ -25,9 +25,7 @@
     "karma-webpack": "^1.7.0",
     "mocha": "^2.2.5",
     "sinon": "^1.16.1",
-    "webpack": "^1.11.0"
-  },
-  "dependencies": {
+    "webpack": "^1.11.0",
     "react": "^0.12.2"
   }
 }
