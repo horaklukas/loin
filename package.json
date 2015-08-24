@@ -7,7 +7,11 @@
     "test": "karma start"
   },
   "author": "Lukas Horak <horaklukas@centrum.cz>",
-  "license": "ISC",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/horaklukas/loin.git"
+  },
   "devDependencies": {
     "chai": "^3.2.0",
     "cjsx-loader": "^2.0.1",

@@ -25,7 +25,3 @@ Component props
 ---------------
 
 `message` - Text shown before the dot progress bar, default is "Loading"
-
-License
---------
-Licensed under the MIT license.
