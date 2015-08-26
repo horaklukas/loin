@@ -20,12 +20,13 @@
     "karma": "^0.13.9",
     "karma-chai-plugins": "^0.6.0",
     "karma-chrome-launcher": "^0.2.0",
+    "karma-firefox-launcher": "^0.1.6",
     "karma-mocha": "^0.2.0",
     "karma-sinon": "^1.0.4",
     "karma-webpack": "^1.7.0",
     "mocha": "^2.2.5",
+    "react": "^0.12.2",
     "sinon": "^1.16.1",
-    "webpack": "^1.11.0",
-    "react": "^0.12.2"
+    "webpack": "^1.11.0"
   }
 }
