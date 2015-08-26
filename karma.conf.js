@@ -5,7 +5,7 @@ module.exports = function (config) {
     browserNoActivityTimeout: 30000,
     browsers: [ process.env.TRAVIS_CI ? 'PhantomJS' : 'Chrome' ],
     singleRun: true, //just run once by default
-    frameworks: [ 'mocha', 'chai', 'sinon-chai', 'sinon' ],
+    frameworks: [ 'mocha', 'chai', 'sinon-chai', 'sinon', 'phantomjs-shim' ],
     files: [
       'tests.webpack.js'
     ],
