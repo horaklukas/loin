@@ -2,7 +2,8 @@ var webpack = require('webpack');
 
 module.exports = function (config) {
   config.set({
-    browsers: [ 'Chrome' ],
+    browserNoActivityTimeout: 30000,
+    browsers: [ process.env.TRAVIS_CI ? 'Firefox' : 'Chrome' ],
     singleRun: true, //just run once by default
     frameworks: [ 'mocha', 'chai', 'sinon-chai', 'sinon' ],
     files: [
