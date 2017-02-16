@@ -1,24 +1,29 @@
 var path = require('path');
 
 module.exports = {
-  entry: ['./src/indicator'],
+  entry: ['./index'],
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: 'indicator.js',
+    filename: 'loin.js',
     libraryTarget: 'commonjs2'// 'umd',
     //library: 'LoadingIndicator' // name of the global var
   },
   resolve: {
-    extensions: ['', '.js', '.cjsx', '.coffee']
+    extensions: ['', '.js']
   },
   module: {
     loaders: [
-      { test: /\.cjsx$/, loaders: ['coffee', 'cjsx']},
-      { test: /\.coffee$/, loader: 'coffee' },
-      { test: /\.styl$/, loader: 'style-loader!css-loader!stylus-loader' }
+      {
+		    test: /\.js$/,
+		    exclude: 'node_modules',
+		    loader: 'babel-loader',
+		    query: {
+			    presets: ['es2015']
+		    }
+	    }
     ]
   },
   externals: {
-    'react': true//'React'
+    'react': true
   }
-}
+};
