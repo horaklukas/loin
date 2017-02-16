@@ -4,6 +4,12 @@ import Timer from './Timer';
 
 const MAX_DOTS_COUNT = 3;
 
+/**
+ * type Props = {
+ *   message?: string,
+ * }
+ */
+
 const repeat = (str, count) => {
 	var rpt = '';
 

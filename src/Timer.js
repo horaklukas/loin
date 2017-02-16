@@ -28,4 +28,4 @@ export default (LoadingIndicator) => {
 	}
 }
 
-export const TICK = 500;
+export const TICK = 250;
