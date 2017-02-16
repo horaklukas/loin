@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/horaklukas/loin.svg)](https://travis-ci.org/horaklukas/loin)
+
 Loin
 ====
 
