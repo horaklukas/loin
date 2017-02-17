@@ -1,29 +1,48 @@
-[![Build Status](https://travis-ci.org/horaklukas/loin.svg)](https://travis-ci.org/horaklukas/loin)
-
 Loin
 ====
 
-Very simple **lo**ading **in**dicator React component that just show "loading" message and dot progress bar.
+[![Build Status](https://travis-ci.org/horaklukas/loin.svg?branch=master)](https://travis-ci.org/horaklukas/loin)
 
-Usage
------
+Few types of simple **lo**ading **in**dicators as a React component.
 
-```javascript
-var React = require('react');
-var LoadingIndicator = require('loin');
+Install
+-------
 
-React.createClass({
-  render: function() {
-  	return (
-  		<div>
-  			<LoadingIndicator message="Loading data" />
-  		</div>
-  	);
-  }
-});
+```
+npm install --save horaklukas/loin
 ```
 
-Component props
+Indicator types
 ---------------
 
-`message` - Text shown before the dot progress bar, default is "Loading"
+Available indicator types and their props
+
+### `Dots`
+
+  `message` {string} Text shown before the dot progress bar, default is "Loading"
+
+
+### `Columns`
+
+  `count` {number} Number of columns
+
+  `color` {string} Color of columns
+
+Usage
+------
+
+```javascript
+import React from 'react';
+import {Dots, Columns} from 'loin';
+
+class ParentComponent extends React.Component {
+  render() {
+    return (
+      <div>
+        <Dots message="Loading data" />
+        <Columns color="blue" count={6} />
+      </div>
+    );
+  }
+}
+```

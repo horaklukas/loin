@@ -9,7 +9,7 @@ module.exports = {
     //library: 'LoadingIndicator' // name of the global var
   },
   resolve: {
-    extensions: ['', '.js']
+    extensions: ['.js']
   },
   module: {
     loaders: [
